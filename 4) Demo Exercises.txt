@@ -1,0 +1,76 @@
+EX-1:- write a shell script to input a number and check whether a given number is positive or negative or zero.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Ans:-
+echo "Enter First Number:-"
+read a
+
+if [ $a -lt 0 ]
+then
+    echo "$a is Negative"
+elif [ $a -gt 0 ]
+then
+    echo "$a is Positive"
+else
+  echo "$a is Zero"
+fi
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	EX-2:- write a shell script to find out the largest of three numbers
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Ans:-
+echo "Enter First Number:-"
+read a
+
+echo "Enter Second Number:-"
+read b
+
+echo "Enter Third Number:-"
+read c
+
+if [ $a -eq $b ] && [ $b -eq $c ]
+then
+    echo "All Values are same!"
+
+elif [ $a -ge $b ] && [ $a -ge $c ]
+then
+    echo "$a is Big"
+
+elif [ $b -ge $a ] && [ $b -ge $c ]
+then
+    echo "$b is Big"
+
+else
+    echo "$c is Big"
+fi
+---------------------------------------------------------------------------------------------------------------------------------------------
+	EX-3:- write a shell script to check whether year is leap year or not
+---------------------------------------------------------------------------------------------------------------------------------------------
+Ans:-
+echo "Enter Year:-"
+read year
+
+if [ $((year % 400)) -eq 0 ]
+then
+    echo "$year is a Leap Year"
+
+elif [ $((year % 100)) -eq 0 ]
+then
+    echo "$year is Not a Leap Year"
+
+elif [ $((year % 4)) -eq 0 ]
+then
+    echo "$year is a Leap Year"
+
+else
+    echo "$year is Not a Leap Year"
+fi
+---------------------------------------------------------------------------------------------------------------------------------------------------
+	EX-4:- write a shell script to generate to multiplication to table
+--------------------------------------------------------------------------------------------------------------------------------------------------- 
+Ans:-
+echo "Enter Number:-"
+read n
+
+for ((i=1; i<=10; i++))
+do
+    echo "$n x $i = $((n * i))"
+done

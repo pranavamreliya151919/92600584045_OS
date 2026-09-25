@@ -1,0 +1,11 @@
+echo "Enter First Number:-"
+read a
+
+num=$(($a%2))
+
+if [ $num -eq 0 ]
+then
+    echo "$a is Even"
+else
+    echo "$a is Odd"
+fi
